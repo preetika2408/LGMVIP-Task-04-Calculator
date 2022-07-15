@@ -1,0 +1,104 @@
+:root{
+    --primary : blue;
+    --dark :  #0b0b0b;
+    --colorhover :  rgba(28, 227, 241, 0.979); 
+}
+
+* {
+    font-family: "revert-laye", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background-image: url("calculator_glasses_cactus_215847_300x168.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 50px;
+    margin-top: -10px;
+    border-bottom: 5px solid var(--primary);
+ 
+}
+
+h1 span{
+ color: black;  
+}
+
+.container {
+    background-color:rgb(3, 50, 32);
+    max-width: 300px;
+    height: auto;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 35px;
+    border: 3px solid var(--primary);
+    border-radius: 30px;
+    user-select: none;
+}
+
+#Display-area {
+    width: 100%;
+    margin: 3vh 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, minmax(40px, auto));
+    word-wrap: break-word;
+    padding-bottom: 20px;
+    border-bottom: 4px solid var(--primary);
+}
+
+#Display-area .currentInput {
+    /* display: flex; */
+    text-align: right;
+    height: 8vh;
+    color: rgb(7, 6, 7);
+    font-size: xx-large;
+    line-height: 2;
+    word-wrap: break-word;
+}
+
+#Display-area .answerScreen {
+    text-align: right;
+    color: rgba(10, 78, 130, 0.87);
+    height: 12px;
+    line-height: 2;
+    font-size: x-large;
+}
+
+.keypad-btns {
+    display: grid;
+    grid: repeat(5, 70px) / repeat(4, 70px);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.keypad-btns button {
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color:var(--dark);
+    color: white;
+    font-size: x-large;
+}
+
+.keypad-btns .fun_btn {
+    color: var(--primary);
+}
+
+.num_btn:hover,.fun_btn:hover {
+    background-color: var(--colorhover);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: var(--dark);
+        align-items: flex-start;
+    }
+}
